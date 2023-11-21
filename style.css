@@ -1,1 +1,102 @@
 /* write your code here */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #FCEDDA;
+}
+.face{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #EE4E34;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.face::before{
+    content: '';
+    position: absolute;
+    top: 190px;
+    width: 150px;
+    height: 15px;
+    background: #FCEDDA;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition: 0.5s
+}
+.face:hover::before{
+    top: 160px;
+    width: 150px;
+    height: 100px;
+    background: #FCEDDA;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+}
+.eyebrowleft{
+    content: '';
+    position: absolute;
+    top: 44px;
+    left: 65px;
+    width: 70px;
+    height: 15px;
+    background: #000;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition: 0.5s;
+}
+.face:hover .eyebrowleft{
+    top: 44px;
+    left: 65px;
+    width: 70px;
+    height: 15px;
+    background: #000;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    transform: rotate(10deg);
+    transform-origin: left bottom;
+}
+.eyebrowright{
+    content: '';
+    position: absolute;
+    top: 44px;
+    right: 65px;
+    width: 70px;
+    height: 15px;
+    background: #0a0a0a;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition: 0.5s
+}
+.eyes{
+    position: relative;
+    top: -35px;
+    display: flex
+}
+.eyes .eye{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: block;
+    background: #fff;
+    margin: 0 15px;
+    border-radius: 50%
+}
+.eyes .eye::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border-radius: 50%
+}
